@@ -2,10 +2,9 @@ import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-20 relative ">
-      <div className="absolute inset-0 "></div>
+    <section className="min-h-screen flex items-center pt-20 relative z-10">
       {/* Foreground content */}
-      <div className="flex w-8xl mx-auto relative z-10">
+      <div className="flex w-8xl mx-auto relative ">
         <div className="w-5xl p-5">
           <p className=" sm:text-8xl text-left mb-10">
             Healthcare Excellence Since 1982
