@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-20 relative overflow-hidden">
+    <section className="min-h-screen flex items-center pt-20 relative ">
       <div className="absolute inset-0 "></div>
       {/* Foreground content */}
       <div className="flex w-8xl mx-auto relative z-10">
@@ -10,7 +10,6 @@ export default function Hero() {
           <p className=" sm:text-8xl text-left mb-10">
             Healthcare Excellence Since 1982
           </p>
-
           <p className="text-xl mb-10">
             For over four decades, Progressive Medical Corporation has been
             committed to delivering world-class healthcare products to Filipino
@@ -18,8 +17,7 @@ export default function Hero() {
             distributor in the Philippines, we stand for quality, innovation,
             and care.
           </p>
-
-          <Button variant="outline" size="lg" className="">
+          <Button variant="default" size="lg" className="w-[200px] h-[40px]">
             Learn More
           </Button>
         </div>
