@@ -3,6 +3,32 @@
 
 /* your global styles here */
 
+@theme {
+  --color-primary-50: #e7eaf4;
+  --color-primary-100: #c2c9e1;
+  --color-primary-200: #9aa6cc;
+  --color-primary-300: #7183b6;
+  --color-primary-400: #4f659f;
+  --color-primary-500: #081a5b; /* your main color */
+  --color-primary-600: #06164e;
+  --color-primary-700: #041140;
+  --color-primary-800: #020c33;
+  --color-primary-900: #010726;
+}
+
+@theme {
+  --color-secondary-50: #f0f9e8; /* very light */
+  --color-secondary-100: #daf0c9;
+  --color-secondary-200: #bce4a1;
+  --color-secondary-300: #9ad87a;
+  --color-secondary-400: #7fc251;
+  --color-secondary-500: #84bf4a; /* main color */
+  --color-secondary-600: #70a23f; /* slightly darker */
+  --color-secondary-700: #5c8234;
+  --color-secondary-800: #486329;
+  --color-secondary-900: #35421f; /* darkest tone */
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
