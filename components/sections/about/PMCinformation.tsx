@@ -1,21 +1,7 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
+"use client";
 import { Flag } from "lucide-react";
+import Image from "next/image";
+import { useRef } from "react";
 
 export default function PMCInformation() {
   const info = [
@@ -35,8 +21,9 @@ export default function PMCInformation() {
       icon: Flag,
     },
   ];
+  const sectionRef = useRef(null);
   return (
-    <section className="py-24">
+    <section id="about" ref={sectionRef} className="py-24">
       <div className="flex justify-center items-center w-full mb-24 ">
         <p className=" text-xl text-center w-xl">
           As a trusted partner in healthcare, we believe it is important to
@@ -45,8 +32,8 @@ export default function PMCInformation() {
         </p>
       </div>
 
-      <div className="h-screen flex items-center justify-between px-20">
-        <div className="grid grid-cols-4 gap-8">
+      <div className="h-screen flex items-center justify-between ">
+        <div className="grid grid-cols-4 text-right">
           {/* Left column */}
           <div className="col-span-2 flex flex-col space-y-12">
             <p className="text-2xl">
@@ -60,7 +47,7 @@ export default function PMCInformation() {
             </p>
 
             {/* Info Grid */}
-            <div className="grid grid-cols-3 gap-6 text-center mt-8">
+            <div className="grid grid-cols-3 text-center mt-8">
               {info.map((item, index) => (
                 <div key={index}>
                   <p className="text-2xl font-bold">{item.title}</p>
@@ -72,10 +59,11 @@ export default function PMCInformation() {
 
           {/* Right column */}
           <div className="col-span-2 flex justify-center items-center ">
-            <img
+            <Image
               src="/about_images/Healthcare Professional.png"
               alt="Healthcare Professional"
-              className="aspect-[5/4] object-contain w-full"
+              width={500}
+              height={500}
             />
           </div>
         </div>
