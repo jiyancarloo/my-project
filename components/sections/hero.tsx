@@ -5,6 +5,7 @@ import React from "react";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { Star, Stethoscope } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -20,41 +21,87 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="min-h-screen flex items-center relative z-10 py-6 ">
+      className="min-h-screen flex items-center relative z-10 ">
       {/* Container */}
-      <div className="relative border w-15/16 flex flex-col justify-between mx-auto rounded-2xl p-8 min-h-[90vh] overflow-hidden">
+      <div className="relative h-screen w-full flex items-center justify-center overflow-hidden border-b-2 rounded-b-xl  ">
         {/* Background image */}
         <Image
           src="/hero_image/hero1.jpg"
           alt="herobanner"
           fill
-          className="object-cover object-center absolute inset-0 -z-10"
+          className="object-cover object-center absolute inset-0 -z-10 "
           priority
         />
 
-        <div className="absolute inset-0 bg-black/40 -z-10"></div>
+        <div className="absolute inset-0 bg-black/50 -z-10"></div>
 
-        {/* Bottom Content */}
-        <div className="relative z-20 flex flex-col gap-y-4 mt-auto items-start text-left p-6 text-white left-2.5">
-          <span className="text-5xl leading-tight">
+        {/* CENTER CONTENT */}
+        <div className="relative z-20 flex flex-col justify-center items-center gap-y-8  text-center  ">
+          <div className="flex items-center gap-2 border rounded-full px-5 py-2 bg-blue-200 backdrop-blur-lg">
+            <Stethoscope size={18} />
+            <span className="text-sm text-black/40 font-semibold">
+              Premium Solutions
+            </span>
+          </div>
+
+          <h1 className="text-6xl/17 font-semibold text-shadow-2xs antialiased text-white">
             Delivering quality healthcare solutions <br />
-            with integrity and innovation
-          </span>
+            with <span className="text-blue-200">integrity and innovation</span>
+          </h1>
 
-          <p className="text-lg text-gray-100 text-justify">
-            Delivering world-class healthcare solutions to Filipino families for
-            over four decades.
-            <br /> Progressive Medical Corporation the Philippines’ first
-            ISO-9001:2015 certified distributor
+          <p className="text-2xl text-white ">
+            Providing world-class healthcare to Filipino families for more than
+            four decades,
+            <br />
+            Progressive Medical Corporation is the{" "}
+            <span className="text-blue-200">
+              Philippines’ first ISO 9001:2015
+            </span>{" "}
+            certified distributor.
           </p>
 
-          <div className="flex items-center ">
+          <div className="flex items-center gap-2">
+            <div className="flex -space-x-2 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt="1"
+                className="inline-block size-10 rounded-full ring-2 ring-gray-900 outline -outline-offset-1 outline-white/10"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt="2"
+                className="inline-block size-10 rounded-full ring-2 ring-gray-900 outline -outline-offset-1 outline-white/10"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                alt="3"
+                className="inline-block size-10 rounded-full ring-2 ring-gray-900 outline -outline-offset-1 outline-white/10"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt="4"
+                className="inline-block size-10 rounded-full ring-2 ring-gray-900 outline -outline-offset-1 outline-white/10"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <div className="flex items-start ">
+                {Array.from({ length: 5 }).map((_, rate) => (
+                  <Star key={rate} size={18} className="fill-yellow-400 " />
+                ))}
+              </div>
+              <span className="text-xs text-white">
+                Trusted by 100+ hospitals
+              </span>
+            </div>
+          </div>
+
+          <div className="flex items-center pt-2">
             <div className="group inline-block relative pt-2 z-20 ">
               <button
                 onClick={() => scrollToSection("#home")}
-                className="relative overflow-hidden px-6 py-3 w-fit rounded-full border border-white text-white text-md transition-colors duration-500">
-                <span className="absolute inset-0 bg-white -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out rounded-full"></span>
-                <span className="relative z-10 group-hover:text-primary-600 transition-colors duration-500">
+                className="relative overflow-hidden p-8 py-4 w-fit rounded-full border border-white/50  text-white  transition-colors duration-500 text-lg">
+                <span className="absolute inset-0 bg-blue-200 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out rounded-lg"></span>
+                <span className="relative z-10 group-hover:text-primary-600 transition-colors duration-500 ">
                   Explore Our Solutions
                 </span>
               </button>
