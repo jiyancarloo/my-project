@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Hero from "@/components/sections/hero";
 import PMCInformation from "@/components/sections/about/PMCinformation";
 import Contact from "@/components/sections/contact/contact";
@@ -8,7 +7,7 @@ import Products from "@/components/sections/products/ProductSection";
 export default function Home() {
   return (
     <>
-      <div>
+      <div className="">
         <Hero />
         <Details />
         <PMCInformation />
