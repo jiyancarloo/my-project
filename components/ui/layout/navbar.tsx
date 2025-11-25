@@ -68,23 +68,23 @@ export default function Navbar() {
       <section
         ref={navRef}
         className="fixed top-4 left-1/2 -translate-x-1/2 z-20 opacity-0 mx-auto">
-        <div className=" backdrop-blur-md shadow-lg rounded-full px-8  py-5 flex items-center justify-center gap-x-2  ">
+        <div className=" backdrop-blur-lg shadow-2xl rounded-full px-10  py-5 flex items-center justify-center gap-x-8 bg-[#F4F6FB]">
           <Image
             onClick={() => scrollToSection("#hero")}
             src="/nav_images/logo.png"
             alt="Healthcare Professional"
-            width={160}
-            height={160}
-            className="px-2 cursor-pointer"
+            width={180}
+            height={180}
+            className="cursor-pointer px-2"
           />
 
-          <div className="flex items-center justify-center gap-x-2  max-lg:w-[90%] w-100 space-x-7 ">
+          <div className="flex items-center justify-center gap-x-2  max-lg:w-[90%] w-100 space-x-2 ">
             {navItems.map((item) => (
               <button
-                className={`group w-auto transition-colors duration-200 text-sm  ${
+                className={`group w-auto transition-colors duration-200 text-md px-4 py-2 rounded-full font-medium  ${
                   activeSection === item.id
-                    ? " text-black transition-all ease-in duration-500 "
-                    : " hover:text-gray-900 text-gray-400"
+                    ? " text-white transition-all ease-in duration-500 bg-primary-500  "
+                    : " hover:text-primary-500 text-gray-400"
                 }`}
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}>
