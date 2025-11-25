@@ -2,6 +2,7 @@
 import { Flag } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
+import Carousel from "@/components/ui/Carousel/Carousel";
 
 export default function PMCInformation() {
   const info = [
@@ -23,7 +24,7 @@ export default function PMCInformation() {
   ];
   const sectionRef = useRef(null);
   return (
-    <section id="about" ref={sectionRef} className="py-24">
+    <section id="about" ref={sectionRef} className="py-24 ">
       <div className="flex justify-center items-center w-full mb-24 ">
         <p className=" text-xl text-center w-xl">
           As a trusted partner in healthcare, we believe it is important to
@@ -31,6 +32,7 @@ export default function PMCInformation() {
           work.
         </p>
       </div>
+      <Carousel />
 
       <div className="h-screen flex items-center justify-between ">
         <div className="grid grid-cols-4 text-right">
