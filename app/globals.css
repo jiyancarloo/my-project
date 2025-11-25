@@ -3,6 +3,18 @@
 
 /* your global styles here */
 
+html {
+  font-family: var(--font-poppins);
+}
+
+/* h1 {
+  font-family: var(--font-cal-sans);
+} */
+
+@theme {
+  --color-third: #f8f9f5;
+}
+
 @theme {
   --color-primary-50: #e7eaf4;
   --color-primary-100: #c2c9e1;

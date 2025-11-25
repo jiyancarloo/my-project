@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/ui/layout/navbar";
 import Footer from "@/components/ui/layout/footer";
-import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
 });
+/* 
+const cal_sans = Cal_Sans({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-cal-sans",
+  display: "swap",
+}); */
 
 export const metadata: Metadata = {
   title: "Progressive Medical Corporation",
@@ -20,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={poppins.className}>
+    <html lang="en" className={` ${poppins.variable}  `}>
+      <body>
         <Navbar />
         <main>{children}</main>
         <Footer />
