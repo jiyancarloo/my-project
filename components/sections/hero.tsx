@@ -21,9 +21,9 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="min-h-screen flex items-center relative z-10 ">
+      className="min-h-[90vh]flex items-center relative z-10 ">
       {/* Container */}
-      <div className="relative h-screen w-full flex items-center justify-center overflow-hidden border-b-2 rounded-b-xl  ">
+      <div className="relative h-[90vh] w-full flex items-center justify-center overflow-hidden border-b-2 rounded-b-xl  ">
         {/* Background image */}
         <Image
           src="/hero_image/hero1.jpg"
@@ -50,14 +50,12 @@ export default function Hero() {
           </h1>
 
           <p className="text-2xl text-white ">
-            Providing world-class healthcare to Filipino families for more than
-            four decades,
+            Empowering Trusted Healthcare with Integrity and Innovation
             <br />
-            Progressive Medical Corporation is the{" "}
-            <span className="text-blue-200">
-              Philippines’ first ISO 9001:2015
+            for almost over <span className="text-blue-200">
+              {" "}
+              20 years
             </span>{" "}
-            certified distributor.
           </p>
 
           <div className="flex items-center gap-2">
@@ -67,6 +65,7 @@ export default function Hero() {
                 alt="1"
                 className="inline-block size-10 rounded-full ring-2 ring-gray-900 outline -outline-offset-1 outline-white/10"
               />
+
               <img
                 src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                 alt="2"
