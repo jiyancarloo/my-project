@@ -58,7 +58,7 @@ export default function Navbar() {
   const scrollToSection = (sectionId: string) => {
     gsap.to(window, {
       duration: 1,
-      scrollTo: { y: sectionId, offsetY: 0 },
+      scrollTo: { y: sectionId, offsetY: 50 },
       ease: "power2.inOut",
     });
   };
@@ -67,8 +67,8 @@ export default function Navbar() {
     <>
       <section
         ref={navRef}
-        className="fixed top-4 left-1/2 -translate-x-1/2 z-20 opacity-0 mx-auto">
-        <div className=" backdrop-blur-lg shadow-2xl rounded-full px-10  py-5 flex items-center justify-center gap-x-8 bg-[#F4F6FB]">
+        className="fixed top-3 left-1/2 -translate-x-1/2 z-20 opacity-0 mx-auto">
+        <div className=" backdrop-blur-lg shadow-xl rounded-full px-10  py-4 flex items-center justify-center gap-x-8 bg-[#F4F6FB]">
           <Image
             onClick={() => scrollToSection("#hero")}
             src="/nav_images/logo.png"
@@ -81,7 +81,7 @@ export default function Navbar() {
           <div className="flex items-center justify-center gap-x-2  max-lg:w-[90%] w-100 space-x-2 ">
             {navItems.map((item) => (
               <button
-                className={`group w-auto transition-colors duration-200 text-md px-4 py-2 rounded-full font-medium  ${
+                className={`group w-auto transition-colors duration-200 text-sm px-4 py-2 rounded-full  ${
                   activeSection === item.id
                     ? " text-white transition-all ease-in duration-500 bg-primary-500  "
                     : " hover:text-primary-500 text-gray-400"
