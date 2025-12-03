@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { Star, Stethoscope } from "lucide-react";
+import HospitalCarousel from "../ui/CarouselBrand/Carousel";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -21,9 +22,9 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="min-h-[90vh]flex items-center relative z-10 ">
+      className="min-h-[100vh]flex items-center relative z-10 ">
       {/* Container */}
-      <div className="relative h-[90vh] w-full flex items-center justify-center overflow-hidden border-b-2 rounded-b-xl  ">
+      <div className="relative h-[80vh] w-full flex flex-col items-center justify-center overflow-hidden border-b-2">
         {/* Background image */}
         <Image
           src="/hero_image/hero1.jpg"
@@ -37,12 +38,12 @@ export default function Hero() {
 
         {/* CENTER CONTENT */}
         <div className="relative z-20 flex flex-col justify-center items-center gap-y-8  text-center  ">
-          <div className="flex items-center gap-2 border rounded-full px-5 py-2 bg-blue-200 backdrop-blur-lg">
-            <Stethoscope size={18} />
-            <span className="text-sm text-black/40 font-semibold">
-              Premium Solutions
-            </span>
-          </div>
+          {/* <div className="flex items-center gap-2 border rounded-full px-5 py-2 bg-blue-200 backdrop-blur-lg">
+              <Stethoscope strokeWidth={1.8} size={18} />
+              <span className="text-sm text-black/40 font-semibold">
+                Premium Solutions
+              </span>
+            </div> */}
 
           <h1 className="text-6xl/17 font-semibold text-shadow-2xs antialiased text-white">
             Delivering quality healthcare solutions <br />
@@ -50,12 +51,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-2xl text-white ">
-            Empowering Trusted Healthcare with Integrity and Innovation
-            <br />
-            for almost over <span className="text-blue-200">
-              {" "}
-              20 years
-            </span>{" "}
+            your trusted partner in advanced medical equipment and healthcare
+            <br /> supply solutions for more than
+            <span className="text-blue-200"> 20 years</span>{" "}
           </p>
 
           <div className="flex items-center gap-2">
@@ -97,7 +95,7 @@ export default function Hero() {
           <div className="flex items-center pt-2">
             <div className="group inline-block relative pt-2 z-20 ">
               <button
-                onClick={() => scrollToSection("#home")}
+                onClick={() => scrollToSection("#product")}
                 className="relative overflow-hidden p-8 py-4 w-fit rounded-full border border-white/50  text-white  transition-colors duration-500 text-lg">
                 <span className="absolute inset-0 bg-blue-200 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out rounded-lg"></span>
                 <span className="relative z-10 group-hover:text-primary-600 transition-colors duration-500 ">
