@@ -1,19 +1,21 @@
 import Hero from "@/components/sections/hero";
-import PMCInformation from "@/components/sections/about/PMCinformation";
 import Contact from "@/components/sections/contact/contact";
-import Details from "@/components/sections/home/home";
 import Products from "@/components/sections/products/ProductSection";
 import Brands from "@/components/sections/CarouselBrand/Brands";
+import About from "@/components/sections/home/home";
+import Awards from "@/components/sections/awards/Awards";
+import News from "@/components/sections/news/News";
 
 export default function Home() {
   return (
     <>
-      <div className="bg-[#F4F6FB]">
+      <div className="">
         <Hero />
         <Brands />
-        <Details />
-        <PMCInformation />
+        <About />
         <Products />
+        <Awards />
+        <News />
         <Contact />
       </div>
     </>
