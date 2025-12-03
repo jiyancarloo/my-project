@@ -10,9 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
 const navItems = [
-  { id: "#home", name: "Home" },
-  { id: "#about", name: "About" },
+  { id: "#home", name: "About " },
   { id: "#product", name: "Products" },
+  { id: "#awards", name: "Awards" },
+  { id: "#news", name: "News" },
   { id: "#contact", name: "Contact" },
 ];
 export default function Navbar() {
@@ -68,17 +69,17 @@ export default function Navbar() {
       <section
         ref={navRef}
         className="fixed top-3 left-1/2 -translate-x-1/2 z-20 opacity-0 mx-auto">
-        <div className=" backdrop-blur-lg shadow-xl rounded-full px-10  py-4 flex items-center justify-center gap-x-8 bg-[#F4F6FB]">
+        <div className=" backdrop-blur-lg shadow-xl rounded-full px-10  py-5 flex items-center justify-center gap-x-8 bg-[#F4F6FB]">
           <Image
             onClick={() => scrollToSection("#hero")}
-            src="/nav_images/logo.png"
+            src="/nav_images/PPI_logo.png"
             alt="Healthcare Professional"
             width={180}
             height={180}
             className="cursor-pointer px-2"
           />
 
-          <div className="flex items-center justify-center gap-x-2  max-lg:w-[90%] w-100 space-x-2 ">
+          <div className="flex items-center justify-center  max-lg:w-[90%] w-120 gap-2">
             {navItems.map((item) => (
               <button
                 className={`group w-auto transition-colors duration-200 text-sm px-4 py-2 rounded-full  ${
