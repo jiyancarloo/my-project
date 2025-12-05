@@ -3,7 +3,8 @@
 import { useRef } from "react";
 import { HeartPulse } from "lucide-react";
 import CoreValues from "./component/CoreValues";
-import Carousel from "@/components/sections/home/component/Carousel";
+import Carousel from "./component/HomeCarousel";
+import HomeCarousel from "./component/HomeCarousel";
 
 export default function About() {
   const sectionRef = useRef(null);
@@ -12,17 +13,17 @@ export default function About() {
       <section
         ref={sectionRef}
         id="home"
-        className=" min-h-screen mx-auto relative">
-        <div className="relative flex flex-col py-6 rounded-lg ">
-          <div className="w-[80%] mx-auto flex flex-col items-center justify-center p-6 gap-y-4 ">
+        className="min-h-screen mx-auto relative bg-white">
+        <div className="">
+          <div className="w-[80%] mx-auto flex flex-col items-center justify-center p-6 gap-y-4 py-20">
             <div className="p-6">
-              <span className=" flex items-center gap-x-1  px-3 py-2 text-sm border border-black/30 rounded-full shadow-lg ">
+              <span className=" flex items-center gap-x-1  px-3 py-2 text-sm border border-black/30 rounded-full shadow-lg text-third ">
                 <HeartPulse size={18} strokeWidth={1.6} />
                 Who we are
               </span>
             </div>
 
-            <div className="flex flex-col items-center gap-4 ">
+            <div className="flex flex-col items-center gap-4 text-third">
               <div className="">
                 <span className="text-4xl font-semibold text-center">
                   Panamed Philippines Incorporation
@@ -30,7 +31,7 @@ export default function About() {
               </div>
 
               <div className="w-[60%]">
-                <p className="text-center text-lg/relaxed">
+                <p className="text-center text-lg/relaxed ">
                   is a trusted professional organization specializing in the
                   importation, marketing and distribution of high-quality
                   medical devices. We have been a reliable partner in the
@@ -40,13 +41,13 @@ export default function About() {
               </div>
             </div>
 
-            <div className="">
+            <div className="py-10">
               <CoreValues />
             </div>
-            <div className=" w-full pt-20">
-              <Carousel />
-            </div>
           </div>
+        </div>
+        <div className=" w-full    ">
+          <HomeCarousel />
         </div>
       </section>
     </>
