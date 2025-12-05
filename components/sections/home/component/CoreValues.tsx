@@ -7,9 +7,9 @@ export default function CoreValues() {
     <>
       <div className="p-8 ">
         <div className="grid grid-cols-3 gap-4 items-stretch ">
-          <div className="border rounded-lg h-full flex flex-col shadow-lg ">
+          <div className="border rounded-lg h-full flex flex-col shadow-lg bg-white  ">
             <div className="p-6 flex flex-col gap-y-6 ">
-              <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg">
+              <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg ">
                 <Icon
                   iconNode={targetArrow}
                   size={30}
@@ -28,7 +28,7 @@ export default function CoreValues() {
             </div>
           </div>
 
-          <div className="border row-span-2 col-span-2  rounded-lg shadow-lg">
+          <div className="border row-span-2 col-span-2  rounded-lg shadow-lg bg-white ">
             <div className="p-6 flex flex-col gap-y-6 ">
               <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg">
                 <HeartPulse size={30} strokeWidth={1.1} color="#081a5b" />
@@ -54,7 +54,7 @@ export default function CoreValues() {
             </div>
           </div>
 
-          <div className="border rounded-lg h-full flex flex-col shadow-lg">
+          <div className="border rounded-lg h-full flex flex-col shadow-lg bg-white ">
             <div className="p-6 flex flex-col gap-y-6 ">
               <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg">
                 <Ribbon size={30} strokeWidth={1.1} color="#081a5b" />
@@ -71,7 +71,7 @@ export default function CoreValues() {
             </div>
           </div>
 
-          <div className="border rounded-lg h-full flex flex-col shadow-lg">
+          <div className="border rounded-lg h-full flex flex-col shadow-lg bg-white ">
             <div className="p-6 flex flex-col gap-y-6 ">
               <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg">
                 <Palette size={30} strokeWidth={1.1} color="#081a5b" />
@@ -87,7 +87,7 @@ export default function CoreValues() {
               </div>
             </div>
           </div>
-          <div className="border rounded-lg h-full flex flex-col shadow-lg">
+          <div className="border rounded-lg h-full flex flex-col shadow-lg bg-white ">
             <div className="p-6 flex flex-col gap-y-6 ">
               <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg">
                 <Lightbulb size={30} strokeWidth={1.1} color="#081a5b" />
@@ -102,7 +102,7 @@ export default function CoreValues() {
               </div>
             </div>
           </div>
-          <div className="border rounded-lg h-full flex flex-col shadow-lg">
+          <div className="border rounded-lg h-full flex flex-col shadow-lg bg-white ">
             <div className="p-6 flex flex-col gap-y-6 ">
               <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg">
                 <Sparkles size={30} strokeWidth={1.1} color="#081a5b" />
