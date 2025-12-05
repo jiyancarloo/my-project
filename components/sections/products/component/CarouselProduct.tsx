@@ -3,8 +3,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import CarouselButton from "@/components/ui/CarouselButton";
+import CarouselDots from "@/components/ui/CarouselDots";
 
-export default function Carousel() {
+export default function ProductCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
   const [prevDisabled, setPrevDisabled] = useState(true);
   const [nextDisabled, setNextDisabled] = useState(true);
@@ -23,19 +24,56 @@ export default function Carousel() {
 
   const cardInfo = [
     {
-      title: "Title goes here",
-      content: "Content",
+      title: "Anesthesia",
+      content:
+        "Experience a wide range of reliable medical equipment  built to empower professionals and strengthen healthcare delivery",
       href: "/home_images/CARE.jpg",
       alt: "Healthcare",
     },
     {
-      title: "Title goes here",
+      title: "Critical Care",
       content: "Content",
       href: "/home_images/CARE2.jpg",
       alt: "Healthcare",
     },
     {
-      title: "Title goes here",
+      title: "Dialysis Products",
+      content: "Content",
+      href: "/about_images/Healthcare Professional.png",
+      alt: "Healthcare",
+    },
+    {
+      title: "Category",
+      content: "Content",
+      href: "/home_images/CARE.jpg",
+      alt: "Healthcare",
+    },
+    {
+      title: "Category",
+      content: "Content",
+      href: "/home_images/CARE2.jpg",
+      alt: "Healthcare",
+    },
+    {
+      title: "Category",
+      content: "Content",
+      href: "/about_images/Healthcare Professional.png",
+      alt: "Healthcare",
+    },
+    {
+      title: "Category",
+      content: "Content",
+      href: "/home_images/CARE.jpg",
+      alt: "Healthcare",
+    },
+    {
+      title: "Category",
+      content: "Content",
+      href: "/home_images/CARE2.jpg",
+      alt: "Healthcare",
+    },
+    {
+      title: "Category",
       content: "Content",
       href: "/about_images/Healthcare Professional.png",
       alt: "Healthcare",
@@ -44,23 +82,17 @@ export default function Carousel() {
 
   return (
     <>
-      <div className="flex items-center gap-6 px-8 py-10  h-full">
-        <div className="p-8 flex-1 flex flex-col gap-6">
-          <span className="text-black text-4xl font-semibold">
-            The heart of{" "}
-            <span className="text-primary-500">Panamed Philippines</span>
-          </span>
-
-          <p className="text-black text-lg/relaxed">
-            lies in the people behind the growth and success of the company over
-            the years. We believe in building a better workforce and employing
-            the best manpower are key critical factors to growth and
-            sustainability of our company. We take pride in our people as they
-            embody the essential characteristic of a well-disciplined and
-            responsible employee coupled with dedication, integrity, and
-            trustworthiness.
-          </p>
-
+      <div className="  gap-6 px-8  h-full">
+        <div className=" flex items-center justify-between p-8 gap-6">
+          <div className="flex flex-col gap-2">
+            <span className="text-third text-4xl font-semibold">
+              Browse different healthcare solutions
+            </span>
+            <p className="text-lg">
+              Experience a wide range of reliable medical equipment <br /> built
+              to empower professionals and strengthen healthcare delivery
+            </p>
+          </div>
           <div className="flex gap-2">
             {/* Prev Button */}
             <CarouselButton
@@ -78,25 +110,26 @@ export default function Carousel() {
           </div>
         </div>
 
-        <div className="relative px-4 flex-1 py-10">
+        <div className="relative px-4 flex-1  ">
           {/* Carousel */}
           <div className="overflow-hidden p-2 " ref={emblaRef}>
             <div className="flex  gap-4 items-center  ">
               {cardInfo.map((item, index) => (
-                <div key={index} className="flex-[0_0_100%] ">
+                <div key={index} className="flex-[0_0_30%] ">
                   <div className="h-[450px] flex text-xl  ">
-                    <div className="w-full h-full relative overflow-hidden rounded-2xl flex items-center justify-center ">
+                    <div className="relative w-full h-full overflow-hidden rounded-2xl">
+                      {/* Background image */}
                       <Image
                         src={item.href}
                         alt={item.alt}
                         fill
-                        priority
-                        className="object-cover object-center absolute inset-0 rounded-2xl "
+                        className="object-cover"
                       />
-                      <div className="absolute inset-0 bg-black/20 "></div>
-                      <div className="relative z-20">
-                        <span className="text-white">
-                          {/* {item.content} */}
+
+                      <div className="absolute inset-0 bg-black/30" />
+                      <div className="absolute top-5 left-4 z-30">
+                        <span className="text-white text-sm px-3 py-1 rounded-full bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg">
+                          {item.title}
                         </span>
                       </div>
                     </div>
@@ -104,6 +137,7 @@ export default function Carousel() {
                 </div>
               ))}
             </div>
+            <CarouselDots emblaApi={emblaApi} />
           </div>
         </div>
       </div>
