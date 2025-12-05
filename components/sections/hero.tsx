@@ -5,8 +5,8 @@ import React from "react";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { Star, Stethoscope } from "lucide-react";
-import HospitalCarousel from "../ui/CarouselBrand/Carousel";
+import { Star } from "lucide-react";
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
