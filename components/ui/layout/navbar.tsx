@@ -84,8 +84,8 @@ export default function Navbar() {
               <button
                 className={`group w-auto transition-colors duration-200 text-sm px-4 py-2 rounded-full  ${
                   activeSection === item.id
-                    ? " text-white transition-all ease-in duration-500 bg-primary-500  "
-                    : " hover:text-primary-500 text-gray-400"
+                    ? " text-white transition-all ease-in duration-500 bg-third  "
+                    : " hover:text-third text-gray-400"
                 }`}
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}>
