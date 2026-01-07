@@ -6,7 +6,7 @@ import CarouselButton from "@/components/ui/CarouselButton";
 import CarouselDots from "@/components/ui/CarouselDots";
 
 export default function ProductCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [prevDisabled, setPrevDisabled] = useState(true);
   const [nextDisabled, setNextDisabled] = useState(true);
 
@@ -82,9 +82,9 @@ export default function ProductCarousel() {
 
   return (
     <>
-      <div className="  gap-6 px-8  h-full">
-        <div className=" flex items-center justify-between p-8 gap-6">
-          <div className="flex flex-col gap-2">
+      <div className="px-20 h-full">
+        <div className=" flex items-center justify-between p-8">
+          <div className=" flex flex-col gap-2">
             <span className="text-third text-4xl font-semibold">
               Browse different healthcare solutions
             </span>
@@ -110,13 +110,13 @@ export default function ProductCarousel() {
           </div>
         </div>
 
-        <div className="relative px-4 flex-1  ">
+        <div className="relative flex-1">
           {/* Carousel */}
-          <div className="overflow-hidden p-2 " ref={emblaRef}>
-            <div className="flex  gap-4 items-center  ">
+          <div className="overflow-hidden " ref={emblaRef}>
+            <div className="flex items-center  ">
               {cardInfo.map((item, index) => (
-                <div key={index} className="flex-[0_0_30%] ">
-                  <div className="h-[450px] flex text-xl  ">
+                <div key={index} className="flex-[0_0_33%] px-3 ">
+                  <div className="h-112.5 flex text-xl  ">
                     <div className="relative w-full h-full overflow-hidden rounded-2xl">
                       {/* Background image */}
                       <Image
