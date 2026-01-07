@@ -1,122 +1,68 @@
-import { Sparkles, Palette, Lightbulb, Ribbon, HeartPulse } from "lucide-react";
-import { Icon } from "lucide-react";
-import { targetArrow } from "@lucide/lab";
-import Image from "next/image";
+import { Sparkles, Sun, Lightbulb, Ribbon, HeartPulse } from "lucide-react";
+import { Target } from "lucide-react";
+
 export default function CoreValues() {
+  const coreItems = [
+    {
+      icon: Target,
+      title: "Commitment",
+      content:
+        "We are committed on what we do and we promise to deliver on time outcome.",
+    },
+    {
+      icon: Ribbon,
+      title: "Honesty",
+      content:
+        "We are honest on dealing with our suppliers, customers, stake holders, employees and through the rest of our business transactions.",
+    },
+    {
+      icon: Sun,
+      title: "Optimism",
+      content:
+        " We look at the positive side of things and situations, which allows us to have positive mindset that leads to positive results.",
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovative",
+      content:
+        "We are always innovative on our products, solution and work flow.",
+    },
+    {
+      icon: Sparkles,
+      title: "Execellence",
+      content:
+        "We do things to achieve excellent and not just mediocre results.",
+    },
+    {
+      icon: HeartPulse,
+      title: "Care",
+      content:
+        "We deliver skilled, dedicated, and compassionate care supporting our customers, their families, and communities in times of need.",
+    },
+  ];
+
   return (
     <>
-      <div className="p-8 ">
-        <div className="grid grid-cols-3 gap-4 items-stretch ">
-          <div className="border rounded-lg h-full flex flex-col shadow-lg bg-white  ">
-            <div className="p-6 flex flex-col gap-y-6 ">
-              <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg ">
-                <Icon
-                  iconNode={targetArrow}
-                  size={30}
-                  strokeWidth={1.1}
-                  color="#081a5b"
-                />
+      <div className="mx-auto w-[80%]">
+        <div className="grid grid-cols-3 gap-8 items-stretch ">
+          {coreItems.map((item, index) => {
+            const CoreIcon = item.icon;
+            return (
+              <div key={index} className=" rounded-lg h-full flex flex-col ">
+                <div className="p-6 flex flex-col gap-y-6 ">
+                  <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg ">
+                    <CoreIcon size={30} strokeWidth={1.2} color="#081a5b" />
+                  </div>
+                  <div className="flex flex-col gap-y-2">
+                    <span className="text-xl text-third font-semibold">
+                      {item.title}
+                    </span>
+                    <p className="text-base text-black/60">{item.content}</p>
+                  </div>
+                </div>
               </div>
-
-              <div className="flex flex-col gap-y-2">
-                <span className="text-xl font-semibold">Commitment</span>
-                <p className="text-base">
-                  We are committed on what we do and we promise to deliver on
-                  time outcome.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border row-span-2 col-span-2  rounded-lg shadow-lg bg-white ">
-            <div className="p-6 flex flex-col gap-y-6 ">
-              <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg">
-                <HeartPulse size={30} strokeWidth={1.1} color="#081a5b" />
-              </div>
-
-              <div className="flex flex-col gap-y-2">
-                <span className="text-xl font-semibold">Care</span>
-                <p className="text-base">
-                  We are highly competent, dedicated, technically skilled and
-                  actively responsive in caring for the needs of our customers,
-                  their families and we care for the people who are affected by
-                  calamities and disasters.
-                </p>
-              </div>
-              <div className="relative w-full h-70 rounded-md overflow-hidden">
-                <Image
-                  src="/home_images/care1.jpg"
-                  alt="care"
-                  fill
-                  className="object-cover "
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="border rounded-lg h-full flex flex-col shadow-lg bg-white ">
-            <div className="p-6 flex flex-col gap-y-6 ">
-              <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg">
-                <Ribbon size={30} strokeWidth={1.1} color="#081a5b" />
-              </div>
-
-              <div className="flex flex-col gap-y-2">
-                <span className="text-xl font-semibold">Honesty</span>
-                <p className="text-base">
-                  We are honest on dealing with our suppliers, customers, stake
-                  holders, employees and through the rest of our business
-                  transactions.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border rounded-lg h-full flex flex-col shadow-lg bg-white ">
-            <div className="p-6 flex flex-col gap-y-6 ">
-              <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg">
-                <Palette size={30} strokeWidth={1.1} color="#081a5b" />
-              </div>
-
-              <div className="flex flex-col gap-y-2">
-                <span className="text-xl font-semibold">Optimism</span>
-                <p className="text-base">
-                  We look at the positive side of things and situations, which
-                  allows us to have positive mindset that leads to positive
-                  results.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="border rounded-lg h-full flex flex-col shadow-lg bg-white ">
-            <div className="p-6 flex flex-col gap-y-6 ">
-              <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg">
-                <Lightbulb size={30} strokeWidth={1.1} color="#081a5b" />
-              </div>
-
-              <div className="flex flex-col gap-y-2">
-                <span className="text-xl font-semibold">Innovative</span>
-                <p className="text-base">
-                  We are always innovative on our products, solution and work
-                  flow.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="border rounded-lg h-full flex flex-col shadow-lg bg-white ">
-            <div className="p-6 flex flex-col gap-y-6 ">
-              <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg">
-                <Sparkles size={30} strokeWidth={1.1} color="#081a5b" />
-              </div>
-
-              <div className="flex flex-col gap-y-2">
-                <span className="text-xl font-semibold">Execellence</span>
-                <p className="text-base">
-                  We do things to achieve excellent and not just mediocre
-                  results.
-                </p>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </>
