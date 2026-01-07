@@ -9,11 +9,11 @@ export default function News() {
       <section
         id="news"
         ref={sectionRef}
-        className="min-h-screen flex items-center justify-center">
+        className="min-h-screen mx-auto relative bg-[#F4F6FB] py-20">
         <div>
           <span>News Section</span>
         </div>
       </section>
-    </>
+    </> 
   );
 }

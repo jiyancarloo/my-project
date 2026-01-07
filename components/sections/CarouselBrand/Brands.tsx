@@ -12,7 +12,7 @@ export default function HospitalCarousel() {
     }),
   ]);
 
-  const hospInfo = [
+  const brandInfo = [
     {
       src: "/brand_images/Endosenz.png",
       alt: "endo",
@@ -52,10 +52,10 @@ export default function HospitalCarousel() {
   ];
   return (
     <>
-      <section className="py-4 bg-[#F4F6FB]">
+      <section className="py-4">
         <div className="overflow-hidden pointer-events-none" ref={emblaRef}>
           <div className="flex gap-2">
-            {hospInfo.map((item, index) => (
+            {brandInfo.map((item, index) => (
               <div key={index} className="flex-[0_0_16%]">
                 <div className="h-40 rounded-2xl flex items-center justify-center">
                   <Image
