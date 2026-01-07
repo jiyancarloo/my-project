@@ -1,6 +1,7 @@
 "use client";
 import gsap from "gsap";
 import Image from "next/image";
+import { ShoppingBasket } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import React from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -79,7 +80,7 @@ export default function Navbar() {
             className="cursor-pointer px-2"
           />
 
-          <div className="flex items-center justify-center  max-lg:w-[90%] w-120 gap-2">
+          <div className="flex items-center justify-center max-lg:w-[90%] w-140 gap-2">
             {navItems.map((item) => (
               <button
                 className={`group w-auto transition-colors duration-200 text-sm px-4 py-2 rounded-full  ${
@@ -92,6 +93,21 @@ export default function Navbar() {
                 {item.name}
               </button>
             ))}
+            <div className="px-5">
+              <div className="group inline-block relative z-20 ">
+                <button className="relative overflow-hidden px-4 py-2 rounded-full   text-black/50  transition-colors duration-500 text-sm flex items-center justify-center gap-2">
+                  <span className="absolute inset-0 bg-blue-200 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out rounded-lg"></span>
+                  <span className="relative z-10 group-hover:text-third transition-colors duration-500 ">
+                    Shop
+                  </span>
+                  <ShoppingBasket
+                    size={22}
+                    strokeWidth={1.2}
+                    className="relative z-10 text-black/50 group-hover:text-third transition-colors duration-500"
+                  />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
