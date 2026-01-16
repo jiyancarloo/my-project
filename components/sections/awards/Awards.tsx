@@ -1,7 +1,5 @@
 "use client";
-
 import { useRef } from "react";
-import { Award } from "lucide-react";
 export default function Awards() {
   const awards = [
     {
@@ -64,27 +62,25 @@ export default function Awards() {
     <section
       id="awards"
       ref={sectionRef}
-      className="max-w-6xl mx-auto min-h-screen py-20">
+      className="mx-auto min-h-screen bg-[#F4F6FB] py-20">
       {/* SECTION TITLE */}
       <div className=" flex justify-center p-6">
         <span className="flex items-center gap-x-1 px-3 py-2 text-sm border border-black/30 rounded-full shadow-lg text-third">
-          <Award size={18} strokeWidth={1.6} />
+          <div className="w-2 h-2 bg-third rounded-full" />
           Milestones
         </span>
       </div>
 
-      <div className="flex flex-col items-center gap-4 mb-20">
-        <div className="w-[80%]">
-          <p className="text-center text-xl/relaxed ">
-            Our awards and certification only shows that the company is sincere
-            with its aim of providing a good product of choice in the medical
-            industry.
-          </p>
-        </div>
+      <div className="max-w-6xl mx-auto mb-10">
+        <p className="text-center text-xl/relaxed ">
+          Our awards and certification only shows that the company is sincere
+          with its aim of providing a good product of choice in the medical
+          industry.
+        </p>
       </div>
 
       {/* TIMELINE WRAPPER */}
-      <div className="relative">
+      <div className="relative max-w-6xl mx-auto">
         {/* Center vertical line */}
         <div className="absolute left-1/2 top-0 h-full w-px bg-gray-300  -translate-x-1/2 hidden md:block " />
 

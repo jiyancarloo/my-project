@@ -82,9 +82,9 @@ export default function ProductCarousel() {
 
   return (
     <>
-      <div className="px-20 h-full">
+      <div className=" h-full">
         <div className=" flex items-center justify-between p-8">
-          <div className=" flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <span className="text-third text-4xl font-semibold">
               Browse different healthcare solutions
             </span>

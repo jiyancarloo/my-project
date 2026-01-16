@@ -1,7 +1,7 @@
 "use client";
 
 import Hero from "@/components/sections/hero";
-import Contact from "@/components/sections/contact/contact";
+import Contact from "@/components/sections/contact/contactForm";
 import Products from "@/components/sections/products/ProductSection";
 import Brands from "@/components/sections/CarouselBrand/Brands";
 import About from "@/components/sections/home/home";

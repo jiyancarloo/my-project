@@ -16,11 +16,11 @@ export default function HomeCarousel() {
       <div className="grid grid-cols-2 items-center gap-8">
         {/* LEFT COLUMN – TEXT */}
         <div className="p-8 space-y-6">
-          <span className="text-black text-4xl font-semibold block">
-            The heart of <span className="text-third">Panamed Philippines</span>
+          <span className="text-white/60 text-4xl font-semibold block">
+            The heart of <span className="text-white">Panamed Philippines</span>
           </span>
 
-          <p className="text-black text-lg/relaxed">
+          <p className="text-white/60 text-lg/relaxed">
             lies in the people behind the growth and success of the company over
             the years. We believe in building a better workforce and employing
             the best manpower are key critical factors to growth and

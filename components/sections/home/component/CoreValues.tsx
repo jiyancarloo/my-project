@@ -10,18 +10,6 @@ export default function CoreValues() {
         "We are committed on what we do and we promise to deliver on time outcome.",
     },
     {
-      icon: Ribbon,
-      title: "Honesty",
-      content:
-        "We are honest on dealing with our suppliers, customers, stake holders, employees and through the rest of our business transactions.",
-    },
-    {
-      icon: Sun,
-      title: "Optimism",
-      content:
-        " We look at the positive side of things and situations, which allows us to have positive mindset that leads to positive results.",
-    },
-    {
       icon: Lightbulb,
       title: "Innovative",
       content:
@@ -39,6 +27,18 @@ export default function CoreValues() {
       content:
         "We deliver skilled, dedicated, and compassionate care supporting our customers, their families, and communities in times of need.",
     },
+    {
+      icon: Ribbon,
+      title: "Honesty",
+      content:
+        "We are honest on dealing with our suppliers, customers, stake holders, employees and through the rest of our business transactions.",
+    },
+    {
+      icon: Sun,
+      title: "Optimism",
+      content:
+        " We look at the positive side of things and situations, which allows us to have positive mindset that leads to positive results.",
+    },
   ];
 
   return (
@@ -54,10 +54,12 @@ export default function CoreValues() {
                     <CoreIcon size={30} strokeWidth={1.2} color="#081a5b" />
                   </div>
                   <div className="flex flex-col gap-y-2">
-                    <span className="text-xl text-third font-semibold">
+                    <span className="text-xl text-white font-semibold">
                       {item.title}
                     </span>
-                    <p className="text-base text-black/60">{item.content}</p>
+                    <p className="text-base text-white/60 text-pretty">
+                      {item.content}
+                    </p>
                   </div>
                 </div>
               </div>

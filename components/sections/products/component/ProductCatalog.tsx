@@ -11,7 +11,7 @@ export default function HomeCarousel() {
   ];
 
   return (
-    <div className="px-20 bg-[#F4F6FB]">
+    <div className="">
       {/* Two-column grid */}
       <div className="grid grid-cols-2 items-center gap-8">
         {/* LEFT COLUMN – TEXT */}

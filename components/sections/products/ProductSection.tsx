@@ -1,6 +1,5 @@
 "use client";
 import { useRef } from "react";
-import { HeartPulse } from "lucide-react";
 import { HandHeart } from "lucide-react";
 import { Plane } from "lucide-react";
 import { ShieldCheck } from "lucide-react";
@@ -35,11 +34,11 @@ export default function Products() {
       <section
         id="product"
         ref={sectionRef}
-        className="min-h-screen mx-auto relative py-25">
-        <div className="w-[80%] mx-auto flex flex-col items-center justify-center p-6 gap-y-4 ">
+        className="min-h-screen mx-auto relative py-20">
+        <div className="w-[80%] mx-auto flex flex-col items-center p-6 ">
           <div className="p-6">
-            <span className="flex items-center gap-x-1 px-3 py-2 text-sm border border-black/30 rounded-full shadow-lg text-third">
-              <HeartPulse size={18} strokeWidth={1.6} />
+            <span className="flex items-center gap-1 px-3 py-2 text-sm border border-black/30 rounded-full shadow-lg text-third">
+              <div className="w-2 h-2  bg-third rounded-full" />
               What We Do
             </span>
           </div>
@@ -54,7 +53,7 @@ export default function Products() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 place-items-center text-center py-20">
+          <div className="grid grid-cols-3 gap-4 place-items-center text-center mt-20">
             {services.map((item, index) => {
               const ServiceIcon = item.icon;
               return (
@@ -68,7 +67,7 @@ export default function Products() {
                       />
                     </div>
                   </div>
-                  <div className="flex flex-col gap-2   ">
+                  <div className="flex flex-col gap-2">
                     <span className="text-xl text-third font-semibold">
                       {item.title}
                     </span>
@@ -80,10 +79,10 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="py-10">
+        <div className="my-10">
           <ProductCarousel />
         </div>
-        <div className="py-20">
+        <div className="mt-20 bg-">
           <ProductCatalog />
         </div>
       </section>

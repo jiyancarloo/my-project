@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const navItems = [
   { id: "#home", name: "About " },
-  { id: "#product", name: "Products" },
+  { id: "#product", name: "Services" },
   { id: "#awards", name: "Awards" },
   { id: "#news", name: "News" },
   { id: "#contact", name: "Contact" },
@@ -60,7 +60,7 @@ export default function Navbar() {
   const scrollToSection = (sectionId: string) => {
     gsap.to(window, {
       duration: 1,
-      scrollTo: { y: sectionId, offsetY: 50 },
+      scrollTo: { y: sectionId, offsetY: 40 },
       ease: "power2.inOut",
     });
   };
