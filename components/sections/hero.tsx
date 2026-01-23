@@ -14,7 +14,7 @@ export default function Hero() {
   const scrollToSection = (sectionId: string) => {
     gsap.to(window, {
       duration: 1,
-      scrollTo: { y: sectionId, offsetY: -50 },
+      scrollTo: { y: sectionId, offsetY: 0 },
       ease: "power2.inOut",
     });
   };
@@ -37,14 +37,14 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/50 -z-10"></div>
 
         {/* CENTER CONTENT */}
-        <div className="relative z-20 flex flex-col justify-center items-center gap-y-8  text-center  ">
-          {/* <div className="flex items-center gap-2 border rounded-full px-5 py-2 bg-blue-200 backdrop-blur-lg">
-              <Stethoscope strokeWidth={1.8} size={18} />
-              <span className="text-sm text-black/40 font-semibold">
-                Premium Solutions
-              </span>
-            </div> */}
+        {/*  <div className="flex items-center gap-2">
+          <div className=" border-white/60 w-8 h-px border"></div>
+          <span className="text-sm text-blue-200 font-semibold">
+            PREMIUM SOLUTIONS
+          </span>
+        </div> */}
 
+        <div className="relative z-20 flex flex-col justify-center items-center gap-y-8  text-center  ">
           <h1 className="text-6xl/17 font-semibold text-shadow-2xs antialiased text-white">
             Delivering quality healthcare solutions <br />
             with <span className="text-blue-200">integrity and innovation</span>
