@@ -1,11 +1,13 @@
 export default function Footer() {
   return (
     <>
-      <div className="w-auto h-80 flex items-center  bg-third p-5">
-        <div>
-          <p>Footer Section</p>
+      <section>
+        <div className="w-auto h-90 flex items-center  bg-third p-5 border-t rounded-xl">
+          <div className="">
+            <p>Footer Section</p>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

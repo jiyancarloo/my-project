@@ -30,7 +30,7 @@ export default function Navbar() {
         gsap.fromTo(
           navRef.current,
           { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.7)" }
+          { y: 0, opacity: 1, duration: 0.7, ease: "back.out(1.7)" },
         );
       },
       onLeaveBack: () => {
@@ -60,7 +60,7 @@ export default function Navbar() {
   const scrollToSection = (sectionId: string) => {
     gsap.to(window, {
       duration: 1,
-      scrollTo: { y: sectionId, offsetY: 40 },
+      scrollTo: { y: sectionId, offsetY: 0 },
       ease: "power2.inOut",
     });
   };

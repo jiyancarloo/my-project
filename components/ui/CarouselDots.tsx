@@ -22,7 +22,7 @@ export default function CarouselDots({ emblaApi }: CarouselDotsProps) {
   }, [emblaApi]);
 
   return (
-    <div className="flex justify-center p-2 gap-2 mt-10 ">
+    <div className="flex justify-end p-2 gap-2 mt-10 mx-40 ">
       {scrollSnaps.map((_, index) => (
         <button
           key={index}
