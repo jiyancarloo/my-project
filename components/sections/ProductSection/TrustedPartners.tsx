@@ -3,23 +3,23 @@ import Image from "next/image";
 export default function TrustedPartners() {
   const partners = [
     {
-      href: "/brand_images/EAMC.png",
+      href: "/partner_images/EAMC.png",
       alt: "eamc",
     },
     {
-      href: "/brand_images/LCP.png",
+      href: "/partner_images/LCP.png",
       alt: "lcp",
     },
     {
-      href: "/brand_images/NKTI.png",
+      href: "/partner_images/NKTI.png",
       alt: "nkti",
     },
     {
-      href: "/brand_images/PGH.png",
+      href: "/partner_images/PGH.png",
       alt: "pgh",
     },
     {
-      href: "/brand_images/PHC.png",
+      href: "/partner_images/PHC.png",
       alt: "phc",
     },
   ];
@@ -41,7 +41,7 @@ export default function TrustedPartners() {
                 </span>
               </article>
             </div>
-            <div className="flex items-center">
+            <div className="flex itpartner">
               {partners.map((partner, index) => (
                 <div
                   key={index}

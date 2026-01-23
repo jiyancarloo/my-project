@@ -30,7 +30,8 @@ export default function Hero() {
           src="/hero_image/hero1.jpg"
           alt="herobanner"
           fill
-          className="object-cover object-center absolute inset-0 -z-10 "
+          className="object-cover object-center absolute inset-0 -z-10"
+          sizes="(max-width: 768px) 100vw, 100vw"
           priority
         />
 
@@ -63,7 +64,6 @@ export default function Hero() {
                 alt="1"
                 className="inline-block size-10 rounded-full ring-2 ring-gray-900 outline -outline-offset-1 outline-white/10"
               />
-
               <img
                 src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                 alt="2"
