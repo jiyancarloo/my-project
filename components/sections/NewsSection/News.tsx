@@ -1,0 +1,63 @@
+"use client";
+import { useRef } from "react";
+import { news } from "@/app/data/news";
+import Image from "next/image";
+
+export default function News() {
+  const sectionRef = useRef(null);
+  return (
+    <>
+      <section
+        id="news"
+        ref={sectionRef}
+        className="min-h-50vh relative py-25 ">
+        <div className="mx-40">
+          {" "}
+          <div className="p-8 place-items-center">
+            <span className="flex items-center gap-1 px-3 py-2 text-sm border border-black/30 rounded-full shadow-lg text-third">
+              <div className="w-2 h-2 bg-third rounded-full" />
+              News & Events
+            </span>
+          </div>
+          <div className="">
+            <p className="text-center text-lg ">
+              Stay informed with the latest updates, announcements, and industry
+              insights from our team.
+            </p>
+          </div>
+          <div className="mx-auto w-[90%]">
+            <div className="grid lg:grid-cols-4 sm:grid-cols-1 gap-6 mt-8">
+              {news.map((item, index) => (
+                <div className="" key={index}>
+                  {item.images.map((image, index) => (
+                    <Image
+                      key={index}
+                      src={image.src}
+                      width={400}
+                      height={400}
+                      alt={image.alt}
+                      className="mb-3 rounded-lg object-fit-cover"
+                    />
+                  ))}
+                  <div className="mb-2">
+                    <span className="text-black/60 text-sm">{item.date}</span>
+                  </div>
+                  <div className="space-y-2">
+                    <div>
+                      <span className="text-lg font-semibold">
+                        {item.title}
+                      </span>
+                    </div>
+                    <div>
+                      <span>{item.exerpt}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
