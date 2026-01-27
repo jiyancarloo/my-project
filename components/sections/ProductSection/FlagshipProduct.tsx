@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Flagship() {
   return (
-    <div className="mx-40 py-20">
+    <div className="mx-30 py-30">
       {/* Two-column grid */}
       <div className="">
         <div className="grid grid-cols-2 items-center ">

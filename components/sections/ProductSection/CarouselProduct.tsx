@@ -25,8 +25,8 @@ export default function ProductCarousel() {
 
   return (
     <>
-      <div className="py-20 space-y-10 ">
-        <div className=" mx-40 flex items-center justify-between p-8">
+      <div className="py-30 space-y-10 ">
+        <div className=" mx-30 flex items-center justify-between p-8">
           <div className="flex flex-col gap-2">
             <span className="text-third text-4xl ">
               Browse different healthcare solutions

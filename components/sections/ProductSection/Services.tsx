@@ -30,7 +30,7 @@ export default function Services() {
   return (
     <>
       <section id="product" ref={sectionRef} className="">
-        <div className="p-8 space-y-8 mx-40 py-30">
+        <div className="p-8 space-y-8 mx-30 py-30">
           <div className="flex flex-col gap-3">
             <span className="text-black/60  uppercase tracking-wide whitespace-nowrap">
               SERVICES

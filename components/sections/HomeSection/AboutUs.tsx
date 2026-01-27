@@ -9,7 +9,7 @@ export default function About() {
       <section ref={sectionRef} id="home" className="relative bg-[#F4F6FB]">
         {/* Container  */}
         {/* Header */}
-        <div className="p-8 space-y-8 mx-40 py-40 ">
+        <div className="p-8 space-y-8 mx-30 py-40 ">
           <div className="flex flex-col gap-3">
             <span className="text-black/60 uppercase tracking-wide whitespace-nowrap">
               WHO WE ARE
