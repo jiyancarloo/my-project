@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/ui/layout/navbar";
-import Footer from "@/components/ui/layout/footer";
+
 import "./globals.css";
 import { Poppins } from "next/font/google";
 
@@ -10,13 +9,6 @@ const poppins = Poppins({
   variable: "--font-poppins",
   display: "swap",
 });
-/* 
-const cal_sans = Cal_Sans({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-cal-sans",
-  display: "swap",
-}); */
 
 export const metadata: Metadata = {
   title: "Progressive Medical Corporation",
@@ -30,11 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={` ${poppins.variable}  `}>
-      <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
