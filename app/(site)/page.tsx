@@ -15,7 +15,6 @@ import Flagship from "@/components/sections/ProductSection/FlagshipProduct";
 import TrustedPartners from "@/components/sections/ProductSection/TrustedPartners";
 import Contact from "@/components/sections/ContactSection/contactForm";
 import AwardsV2 from "@/components/sections/AwardsSection/AwardsV2";
-import News from "@/components/sections/NewsSection/News";
 import Footer from "@/components/ui/layout/footer";
 import NewsV2 from "@/components/sections/NewsSection/NewsV2";
 
