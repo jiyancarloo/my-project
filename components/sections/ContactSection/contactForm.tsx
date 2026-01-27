@@ -6,23 +6,14 @@ export default function Contact() {
   const sectionRef = useRef(null);
   return (
     <>
-      <section
-        id="contact"
-        ref={sectionRef}
-        className=" min-h-screen py-25 bg-[#F4F6FB]">
-        <div className="mx-20">
+      <section id="contact" ref={sectionRef} className=" py-30 bg-[#F4F6FB]">
+        <div className="mx-30">
           {/* 1st Column */}
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] items-start">
             {/* Left Column */}
-            <div className="p-6">
-              <div className="w-fit">
-                <span className="flex items-center  gap-1  px-3  py-2 text-sm border border-black/30 rounded-full shadow-lg text-third ">
-                  <div className="w-2 h-2 bg-third rounded-full" />
-                  Contact Us
-                </span>
-              </div>
+            <div className="p-8">
               <article className="text-pretty">
-                <p className="text-4xl  mt-6 text-gray-600 ">
+                <p className="text-4xl   text-third">
                   Do you have any inquiries about billing, sales, accounting or
                   request a technical support? Drop us a message here.
                 </p>
@@ -32,9 +23,7 @@ export default function Contact() {
             {/* Right Column */}
             <div className="w-full max-w-2xl justify-self-center border rounded-lg bg-white shadow-lg flex flex-col ">
               <div className="px-8 pt-8">
-                <h2 className="text-3xl font-semibold text-third">
-                  Get in Touch
-                </h2>
+                <h2 className="text-3xl  text-third">Get in Touch</h2>
               </div>
 
               <div className="flex-1 grid grid-cols-1 md:grid-cols-4 gap-6 p-8">
