@@ -28,18 +28,18 @@ export default function NewsV2() {
             {/* FEATURED NEWS */}
             <article className="col-span-5">
               <Image
-                src={featured.images[0].src}
-                alt={featured.images[0].alt}
+                src={featured.coverImage.src}
+                alt={featured.coverImage.alt}
                 width={900}
                 height={500}
                 priority
                 className="w-full h-125 object-cover rounded-lg"
               />
               <div className="mt-4 space-y-2">
+                <h3 className="text-2xl font-semibold">{featured.title}</h3>
                 <span className="block text-sm text-black/60">
                   {featured.date}
                 </span>
-                <h3 className="text-2xl font-semibold">{featured.title}</h3>
               </div>
               <Link
                 href={`/news/${featured.slug}`}
@@ -53,10 +53,15 @@ export default function NewsV2() {
             {/* SECONDARY NEWS */}
             <div className="col-span-7  flex flex-col gap-6">
               {secondary.map((item) => (
-                <article key={item.slug} className="flex gap-4   ">
+                <article key={item.slug} className="flex ">
                   <div className="space-y-4">
-                    <span className="text-sm text-black/60 ">{item.date}</span>
-                    <h4 className="text-lg font-medium">{item.title}</h4>
+                    <div className="space-y-2">
+                      <h4 className="text-lg font-medium">{item.title}</h4>
+                      <span className="text-sm text-black/60 ">
+                        {item.date}
+                      </span>
+                    </div>
+
                     <Link
                       href={`/news/${item.slug}`}
                       className="inline-flex items-center gap-1 text-third font-medium  group">
@@ -68,8 +73,8 @@ export default function NewsV2() {
                   </div>
 
                   <Image
-                    src={item.images[0].src}
-                    alt={item.images[0].alt}
+                    src={item.coverImage.src}
+                    alt={item.coverImage.alt}
                     width={400}
                     height={200}
                     className=" object-cover rounded-lg"
