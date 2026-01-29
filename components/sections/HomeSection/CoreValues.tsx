@@ -44,7 +44,7 @@ export default function CoreValues() {
 
   return (
     <>
-      <section className="bg-third min-h-screen">
+      <section className=" bg-[#0D1B2A] min-h-screen">
         <div className="p-8 mx-30 py-30 space-y-14">
           <div className="w-fit flex items-center gap-2">
             <div className="w-8 h-px bg-white rounded-full" />
