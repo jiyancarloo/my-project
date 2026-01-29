@@ -30,7 +30,7 @@ export default function Hero() {
           src="/hero_image/hero1.jpg"
           alt="herobanner"
           fill
-          className="object-cover object-center absolute inset-0 -z-10"
+          className="object-cover object-center absolute -z-10"
           sizes="(max-width: 768px) 100vw, 100vw"
           priority
         />
@@ -46,7 +46,7 @@ export default function Hero() {
         </div> */}
 
         <div className="relative z-20 flex flex-col justify-center items-center gap-y-8  text-center  ">
-          <h1 className="text-6xl/17 font-semibold text-shadow-2xs antialiased text-white">
+          <h1 className="text-6xl/17 font-semibold text-white">
             Delivering quality healthcare solutions <br />
             with <span className="text-blue-200">integrity and innovation</span>
           </h1>
