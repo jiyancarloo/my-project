@@ -8,19 +8,23 @@ export default function RelatedNews({ currentSlug }: Props) {
   const relatedNews = news.filter((item) => currentSlug !== item.slug);
   return (
     <>
-      <section>
-        <h3>Related News</h3>
-        <div className="grid grid-cols-3">
-          {relatedNews.map((item) => (
-            <Link href={`/news/${item.slug}`} key={item.slug}>
-              <Image
-                src={item.images[0].src}
-                alt={item.images[0].alt}
-                width={100}
-                height={100}
-              />
-              <span className="block">{item.date}</span>
-              <span>{item.title}</span>
+      <section className="space-y-4">
+        <h3 className="prose prose-lg">Related News </h3>
+        <div className="grid grid-cols-1 gap-6">
+          {relatedNews.map((item, index) => (
+            <Link href={`/news/${item.slug}`} key={index}>
+              <div className="relative w-full h-56">
+                <Image
+                  src={item.coverImage.src}
+                  alt={item.coverImage.alt}
+                  fill
+                  className="mb-3 rounded-lg object-cover "
+                />
+              </div>
+              <article className="prose prose-md mt-3">
+                <span className="block font-semibold">{item.title}</span>
+                <span className="text-black/60 text-sm">{item.date}</span>
+              </article>
             </Link>
           ))}
         </div>
