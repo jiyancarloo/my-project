@@ -52,19 +52,20 @@ export default function HospitalCarousel() {
   ];
   return (
     <>
-      <section className="py-4">
+      <section className="py-2">
         <div className="overflow-hidden pointer-events-none" ref={emblaRef}>
           <div className="flex gap-2">
             {brandInfo.map((item, index) => (
               <div key={index} className="flex-[0_0_15%]">
-                <div className="h-40 rounded-2xl flex items-center justify-center">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={150}
-                    height={150}
-                    className="filter grayscale"
-                  />
+                <div className="h-40 flex items-center justify-center">
+                  <div className="relative w-40 h-10">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      className="filter grayscale"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
