@@ -10,7 +10,7 @@ export default function NewsV2() {
   const secondary = news.slice(1, 3);
   return (
     <>
-      <section id="news" ref={sectionRef} className="relative">
+      <section id="news" ref={sectionRef} className="min-h-screen relative">
         <div className="p-8 mx-30 py-30 space-y-14">
           <div className="w-fit flex items-center gap-2">
             <div className="w-8 h-px bg-third rounded-full" />
