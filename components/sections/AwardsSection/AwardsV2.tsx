@@ -7,13 +7,13 @@ export default function AwardsV2() {
       title: "ISO CERTIFICATION",
       year: "2015",
       description:
-        "Panamed Philippines Inc. is an ISO 9001:2015 certified company,and has been consistent in ensuring that clients receive high quality products and services.",
+        "Panamed Philippines Inc. is an ISO 9001:2015 certified company, and has been consistent in ensuring that clients receive high quality products and services.",
     },
     {
       title: "BORDERLESS ICU CARE",
       year: "2011",
       description:
-        "Panamed Philippines Inc. is an ISO 9001:2015 certified company,and has been consistent in ensuring that clients receive high quality products and services.",
+        "Panamed Philippines Inc. is an ISO 9001:2015 certified company, and has been consistent in ensuring that clients receive high quality products and services.",
     },
     {
       title: "TOP PERFORMING VENDOR",
@@ -71,13 +71,16 @@ export default function AwardsV2() {
             {/* Right Column */}
             <div className="">
               {awards.map((item, index) => (
-                <div key={index} className="border-b border-black/20 py-8  ">
+                <div
+                  key={index}
+                  className="border-b border-black/20 py-8  space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xl">{item.title}</span>
-                    <h2 className="text-xl">{item.year}</h2>
+                    <span className="text-2xl">{item.title}</span>
+
+                    <h2 className="text-2xl">{item.year}</h2>
                   </div>
-                  <article className="text-pretty mt-4 line-clamp-2 w-2xl">
-                    <p className="">{item.description}</p>
+                  <article className="text-pretty w-2xl">
+                    <p className="text-gray-600">{item.description}</p>
                   </article>
                 </div>
               ))}
