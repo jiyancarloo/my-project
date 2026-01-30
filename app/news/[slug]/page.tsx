@@ -14,10 +14,18 @@ export default async function NewsArticle({ params }: Props) {
 
   return (
     <>
-      <section className=" bg-[#F4F6FB]  ">
-        <div className="max-w-360  mx-auto px-12 py-10 text-pretty ">
-          <div className="grid grid-cols-1 lg:grid-cols-[2fr_400px] gap-14">
+      <section className="min-h-screen bg-[#F4F6FB]  ">
+        <div className="max-w-380 mx-auto px-12 py-10 text-pretty ">
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_380px] gap-20">
             <main className="space-y-6 max-w-none">
+              <Link
+                href="/#news"
+                className="inline-flex items-center gap-1 text-third font-medium group mt-2">
+                <span className="transform transition-transform duration-300 group-hover:-translate-x-1">
+                  ←
+                </span>
+                Back to Home
+              </Link>
               <div className=" w-full relative aspect-video ">
                 <Image
                   src={article.coverImage.src}
@@ -75,14 +83,6 @@ export default async function NewsArticle({ params }: Props) {
             <aside className="lg:sticky lg:top-24 h-fit">
               <RelatedNews currentSlug={slug} />
             </aside>
-            <Link
-              href="/#news"
-              className="inline-flex items-center gap-1 text-third font-medium group mt-2">
-              Home
-              <span className="transform transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </Link>
           </div>
         </div>
       </section>
