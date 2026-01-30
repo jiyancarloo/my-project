@@ -8,12 +8,12 @@ export default function RelatedNews({ currentSlug }: Props) {
   const relatedNews = news.filter((item) => currentSlug !== item.slug);
   return (
     <>
-      <section className="space-y-4">
-        <h3 className="prose prose-lg">Related News </h3>
-        <div className="grid grid-cols-1 gap-6">
+      <section className="space-y-4 p-6 ">
+        <h3 className="prose prose-lg">Related News</h3>
+        <div className="grid grid-cols-1 gap-6 ">
           {relatedNews.map((item, index) => (
-            <Link href={`/news/${item.slug}`} key={index}>
-              <div className="relative w-full h-56">
+            <Link href={`/news/${item.slug}`} key={index} className="">
+              <div className="relative w-full h-60 ">
                 <Image
                   src={item.coverImage.src}
                   alt={item.coverImage.alt}
