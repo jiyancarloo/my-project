@@ -58,7 +58,7 @@ export default function HospitalCarousel() {
             {brandInfo.map((item, index) => (
               <div key={index} className="flex-[0_0_15%]">
                 <div className="h-40 flex items-center justify-center">
-                  <div className="relative w-40 h-10">
+                  <div className="relative w-36 h-8">
                     <Image
                       src={item.src}
                       alt={item.alt}
