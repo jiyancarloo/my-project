@@ -11,7 +11,7 @@ export default function About() {
         {/* Header */}
         <div className="p-8 space-y-8 mx-30 py-40 ">
           <div className="flex flex-col gap-3">
-            <span className="text-black/60 uppercase tracking-wide whitespace-nowrap">
+            <span className="text-black/60 uppercase tracking-widest whitespace-nowrap">
               WHO WE ARE
             </span>
             <div className="border-b border-black/30" />
