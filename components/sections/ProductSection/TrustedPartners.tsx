@@ -38,34 +38,30 @@ export default function TrustedPartners() {
       href: "/partner_images/PGH.png",
       alt: "pgh",
     },
-    {
-      href: "/partner_images/PHC.png",
-      alt: "phc",
-    },
   ];
   return (
     <>
-      <section className="   ">
-        <div className="mx-30 py-20">
-          <div className="place-items-center space-y-14">
-            <div>
-              <article className="text-pretty">
-                <span className="text-xl text-third">
-                  Working alongside trusted healthcare institutions nationwide.
-                </span>
-              </article>
-            </div>
-            <div className="flex gap-12">
+      <section>
+        <div className="px-4 py-12 sm:px-8 lg:px-30 lg:py-20">
+          <div className="space-y-10 text-center">
+            {/* Heading */}
+            <article className="text-pretty max-w-2xl mx-auto">
+              <span className="text-lg sm:text-xl lg:text-2xl text-third">
+                Working alongside trusted healthcare institutions nationwide.
+              </span>
+            </article>
+
+            {/* Logos */}
+            <div className="flex flex-wrap lg:flex-nowrap justify-center gap-6 sm:gap-8 lg:gap-12">
               {partners.map((partner, index) => (
                 <div
                   key={index}
-                  className=" inline-flex items-center justify-center rounded-lg ">
+                  className="w-20 h-20 sm:w-24 sm:h-24 lg:w-24 lg:h-24 relative shrink-0">
                   <Image
                     src={partner.href}
                     alt={partner.alt}
-                    width={100}
-                    height={100}
-                    className="object-cover grayscale"
+                    fill
+                    className="object-contain grayscale hover:grayscale-0 hover:scale-120 transition duration-300  "
                   />
                 </div>
               ))}
