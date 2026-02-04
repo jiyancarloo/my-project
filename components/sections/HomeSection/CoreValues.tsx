@@ -45,7 +45,7 @@ export default function CoreValues() {
   return (
     <>
       <section className=" bg-[#0D1B2A] min-h-screen">
-        <div className="p-8 mx-30 py-30 space-y-14">
+        <div className="px-4 sm:px-8 lg:mx-30 lg:py-30 py-25 space-y-14">
           <div className="w-fit flex items-center gap-2">
             <div className="w-8 h-px bg-white rounded-full" />
             <span className="uppercase tracking-wide whitespace-nowrap text-white/60">
@@ -54,7 +54,7 @@ export default function CoreValues() {
           </div>
           <div className="">
             <article className="text-pretty space-y-6">
-              <p className=" text-4xl text-white max-w-7xl">
+              <p className="text-xl lg:text-4xl text-white max-w-7xl">
                 The principles that guide our decisions, partnerships, and
                 commitment to healthcare excellence.
               </p>
