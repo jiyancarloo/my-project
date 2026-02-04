@@ -3,23 +3,21 @@ import Image from "next/image";
 export default function People() {
   return (
     <section className=" bg-[#F4F6FB]">
-      <div className="mx-30 py-30 p-8 space-y-4">
-        <div className="inline-grid grid-cols-[1fr_1fr] ">
-          <div>
-            <span className="text-4xl block ">
-              The heart of <br />
+      <div className="px-4 sm:px-8 lg:mx-30 space-y-4 py-20 lg:py-30 ">
+        <div className="inline-grid lg:grid-cols-[1fr_1fr] space-y-7">
+          <div className="max-w-3xl ">
+            <span className="text-xl lg:text-4xl block ">
+              The heart of {""}
               <span className="text-third ">Panamed Philippines</span>
             </span>
           </div>
 
-          <div className="">
-            <p className="text-gray-600 text-lg/relaxed ">
-              lies in the people behind the growth and success of the company
-              over the years. We believe in building a better workforce and
-              employing the best manpower are key critical factors to growth and
-              sustainability of our company.
-            </p>
-          </div>
+          <p className="text-gray-600 text-base block ">
+            lies in the people behind the growth and success of the company over
+            the years. We believe in building a better workforce and employing
+            the best manpower are key critical factors to growth and
+            sustainability of our company.
+          </p>
 
           {/* RIGHT COLUMN – IMAGE */}
         </div>
