@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import RelatedNews from "../RelatedNews";
+import Footer from "@/components/ui/layout/footer";
 type Props = { params: { slug: string } };
 
 export default async function NewsArticle({ params }: Props) {
@@ -14,8 +15,8 @@ export default async function NewsArticle({ params }: Props) {
 
   return (
     <>
-      <section className="min-h-screen bg-[#F4F6FB]  ">
-        <div className="max-w-380 mx-auto px-12 py-10 text-pretty ">
+      <section className="min-h-screen bg-[#F4F6FB] ">
+        <div className="max-w-380 mx-auto px-4 sm:px-8 lg:px-12  text-pretty py-10 ">
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_380px] gap-20">
             <main className="space-y-6 max-w-none">
               <Link
@@ -37,7 +38,7 @@ export default async function NewsArticle({ params }: Props) {
               </div>
               <article className="flex gap-3">
                 <div className="bg-third w-1" />
-                <h1 className="text-3xl block font-semibold">
+                <h1 className="lg:text-3xl block font-semibold">
                   {article.title}
                 </h1>
               </article>
@@ -79,13 +80,13 @@ export default async function NewsArticle({ params }: Props) {
                 })}
               </article>
             </main>
-
-            <aside className="lg:sticky lg:top-24 h-fit">
+            <aside className="lg:sticky lg:top-26 h-fit">
               <RelatedNews currentSlug={slug} />
             </aside>
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

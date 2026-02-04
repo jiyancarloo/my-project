@@ -22,15 +22,17 @@ export default function CarouselDots({ emblaApi }: CarouselDotsProps) {
   }, [emblaApi]);
 
   return (
-    <div className="flex justify-end p-2 gap-2 mt-10 mx-40 ">
-      {scrollSnaps.map((_, index) => (
-        <button
-          key={index}
-          onClick={() => emblaApi?.scrollTo(index)}
-          className={`h-0.5 w-8  transition-all duration-300 
+    <div className="mt-10 mx-30">
+      <div className="flex lg:justify-end lg:p-2 gap-1 lg:gap-2">
+        {scrollSnaps.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => emblaApi?.scrollTo(index)}
+            className={`h-0.5 w-16 lg:w-8  transition-all duration-300 
             ${selectedIndex === index ? "bg-third scale-110" : "bg-gray-300"}
           `}></button>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

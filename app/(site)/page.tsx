@@ -38,7 +38,6 @@ export default function Home() {
     <div id="smooth-wrapper" className="overflow-hidden">
       <div id="smooth-content">
         <Hero data-speed="0.2" />
-        <Brands data-speed="0.1" />
 
         {/* ABOUT US */}
         <About data-speed="0.2" />
