@@ -25,18 +25,18 @@ export default function ProductCarousel() {
 
   return (
     <>
-      <div className="py-30 space-y-10 ">
-        <div className=" mx-30 flex items-center justify-between p-8">
-          <div className="flex flex-col gap-2">
-            <span className="text-third text-4xl ">
+      <div className="py-20 lg:py-30 space-y-10 ">
+        <div className="px-4 sm:px-8 lg:mx-30 lg:flex lg:items-center lg:justify-between lg:space-y-8 p-8">
+          <div className="flex flex-col gap-2 max-w-3xl">
+            <span className="text-third text-xl lg:text-4xl ">
               Browse different healthcare solutions
             </span>
-            <p className="text-lg">
-              Experience a wide range of reliable medical equipment <br /> built
-              to empower professionals and strengthen healthcare delivery
+            <p className="text-base lg:text-lg">
+              Experience a wide range of reliable medical equipment built to
+              empower professionals and strengthen healthcare delivery
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className=" hidden lg:flex gap-2">
             {/* Prev Button */}
             <CarouselButton
               onClick={() => emblaApi?.scrollPrev()}
@@ -58,31 +58,30 @@ export default function ProductCarousel() {
           <div className="overflow-hidden " ref={emblaRef}>
             <div className="flex items-center  ">
               {cardInfo.map((item, index) => (
-                <div key={index} className="flex-[0_0_28%] px-3">
-                  <div className="h-112.5 flex text-xl  ">
-                    <div className="relative w-full h-full overflow-hidden rounded-2xl">
-                      {/* Background image */}
-                      <Image
-                        src={item.href}
-                        alt={item.alt}
-                        fill
-                        className="object-cover"
-                      />
-
-                      <div className="absolute inset-0 bg-black/30" />
-                      <div className="absolute top-5 left-4 z-30">
-                        <span className="text-white text-sm px-3 py-1 rounded-full bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg">
-                          {item.title}
-                        </span>
-                      </div>
+                <div
+                  key={index}
+                  className="flex-[0_0_90%] sm:flex-[0_0_45%] md:flex-[0_0_28%] px-3">
+                  <div className="w-full aspect-4/3 sm:aspect-video md:aspect-16/10 relative overflow-hidden rounded-2xl">
+                    <Image
+                      src={item.href}
+                      alt={item.alt}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/40" />
+                    <div className="absolute top-5 left-4 z-30">
+                      <span className="text-white text-sm px-3 lg:px-4 py-1 lg:py-2 rounded-full bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg">
+                        {item.title}
+                      </span>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+          <div></div>
+          <CarouselDots emblaApi={emblaApi} />
         </div>
-        <CarouselDots emblaApi={emblaApi} />
       </div>
     </>
   );
