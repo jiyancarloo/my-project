@@ -11,7 +11,7 @@ export default function NewsV2() {
   return (
     <>
       <section id="news" ref={sectionRef} className="min-h-screen relative">
-        <div className="p-8 mx-30 py-30 space-y-14">
+        <div className="px-4 sm:px-8 py-12 lg:mx-30  lg:py-30 space-y-14">
           <div className="w-fit flex items-center gap-2">
             <div className="w-8 h-px bg-third rounded-full" />
             <span className="text-black/60 uppercase tracking-wide whitespace-nowrap">
@@ -19,28 +19,34 @@ export default function NewsV2() {
             </span>
           </div>
           <article className="">
-            <p className=" text-4xl text-third max-w-7xl">
+            <p className=" text-xl lg:text-4xl text-third max-w-7xl">
               Stay informed with the latest updates, announcements, and industry
               insights from our team.
             </p>
           </article>
-          <div className="grid grid-cols-12 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-13 gap-10">
             {/* FEATURED NEWS */}
-            <article className="col-span-5">
-              <Image
-                src={featured.coverImage.src}
-                alt={featured.coverImage.alt}
-                width={900}
-                height={500}
-                priority
-                className="w-full h-125 object-cover rounded-lg"
-              />
-              <div className="mt-4 space-y-2">
-                <h3 className="text-2xl font-semibold">{featured.title}</h3>
-                <span className="block text-sm text-black/60">
+            <article className="col-span-1 lg:col-span-6 flex flex-col gap-4">
+              <div className="w-full">
+                <Image
+                  src={featured.coverImage.src}
+                  alt={featured.coverImage.alt}
+                  width={1200} // higher for retina
+                  height={675}
+                  priority
+                  className="w-full aspect-video object-cover rounded-lg"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-xl lg:text-3xl font-medium">
+                  {featured.title}
+                </h3>
+                <span className="text-sm lg:text-base text-black/60">
                   {featured.date}
                 </span>
               </div>
+
               <Link
                 href={`/news/${featured.slug}`}
                 className="inline-flex items-center gap-1 text-third font-medium group mt-2">
@@ -50,35 +56,37 @@ export default function NewsV2() {
                 </span>
               </Link>
             </article>
-            {/* SECONDARY NEWS */}
-            <div className="col-span-7  flex flex-col gap-6">
-              {secondary.map((item) => (
-                <article key={item.slug} className="flex ">
-                  <div className="space-y-4">
-                    <div className="space-y-2">
-                      <h4 className="text-lg font-medium">{item.title}</h4>
-                      <span className="text-sm text-black/60 ">
-                        {item.date}
-                      </span>
-                    </div>
 
+            {/* SECONDARY NEWS */}
+            <div className="col-span-1 lg:col-span-7 flex flex-col gap-6">
+              {secondary.map((item) => (
+                <article
+                  key={item.slug}
+                  className="flex flex-col sm:flex-row gap-4">
+                  <div className="shrink-0 sm:w-1/2 lg:w-2/5">
+                    <Image
+                      src={item.coverImage.src}
+                      alt={item.coverImage.alt}
+                      width={800}
+                      height={450}
+                      className="w-full aspect-video object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div className="flex-1 space-y-4">
+                    <div className="space-y-2">
+                      <h4 className="text-md font-medium">{item.title}</h4>
+                      <span className="text-sm text-black/60">{item.date}</span>
+                    </div>
                     <Link
                       href={`/news/${item.slug}`}
-                      className="inline-flex items-center gap-1 text-third font-medium  group">
+                      className="inline-flex items-center gap-1 text-third font-medium group">
                       Read More
                       <span className="transform transition-transform duration-400 group-hover:translate-x-1">
                         →
                       </span>
                     </Link>
                   </div>
-
-                  <Image
-                    src={item.coverImage.src}
-                    alt={item.coverImage.alt}
-                    width={400}
-                    height={200}
-                    className=" object-cover rounded-lg"
-                  />
                 </article>
               ))}
             </div>
