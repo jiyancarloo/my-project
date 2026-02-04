@@ -30,27 +30,27 @@ export default function Services() {
   return (
     <>
       <section id="product" ref={sectionRef} className="">
-        <div className="p-8 space-y-8 mx-30 py-30">
+        <div className="px-4 sm:px-8 lg:mx-30 pt-30 lg:py-30 space-y-8 ">
           <div className="flex flex-col gap-3">
-            <span className="text-black/60  uppercase tracking-wide whitespace-nowrap">
+            <span className="text-black/60 text-sm lg:text-base uppercase tracking-wide whitespace-nowrap">
               SERVICES
             </span>
             <div className="border-b border-black/30" />
           </div>
 
           <article className="text-pretty ">
-            <p className=" text-4xl text-third max-w-7xl">
+            <p className=" text-xl lg:text-4xl text-third max-w-7xl">
               We partner with leading healthcare institutions to provide
               trusted, high-quality medical products that improve patient care
               and elevate healthcare standards nationwide.
             </p>
           </article>
 
-          <div className="grid grid-cols-3 gap-8 mt-20 ">
+          <div className="grid lg:grid-cols-3 gap-20 lg:gap-8 mt-20 ">
             {services.map((item, index) => {
               const ServiceIcon = item.icon;
               return (
-                <div className="space-y-8" key={index}>
+                <div className="space-y-6 lg:space-y-8" key={index}>
                   <div className="">
                     <div className="border rounded-xl w-fit p-3 bg-blue-200 shadow-lg ">
                       <ServiceIcon
