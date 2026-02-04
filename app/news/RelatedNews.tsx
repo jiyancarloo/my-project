@@ -8,7 +8,7 @@ export default function RelatedNews({ currentSlug }: Props) {
   const relatedNews = news.filter((item) => currentSlug !== item.slug);
   return (
     <>
-      <section className="space-y-4 p-6 ">
+      <section className="space-y-4 ">
         <h3 className="prose prose-lg">Related News</h3>
         <div className="grid grid-cols-1 gap-6 ">
           {relatedNews.map((item, index) => (
