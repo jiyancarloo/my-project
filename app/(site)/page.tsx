@@ -5,18 +5,20 @@ import gsap from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 import Hero from "@/components/sections/hero";
-import Brands from "@/components/sections/CarouselSection/Brands";
+
 import About from "@/components/sections/HomeSection/AboutUs";
 import People from "@/components/sections/HomeSection/People";
 import CoreValues from "@/components/sections/HomeSection/CoreValues";
+
 import Services from "@/components/sections/ProductSection/Services";
 import ProductCarousel from "@/components/sections/ProductSection/CarouselProduct";
 import Flagship from "@/components/sections/ProductSection/FlagshipProduct";
 import TrustedPartners from "@/components/sections/ProductSection/TrustedPartners";
+
 import Contact from "@/components/sections/ContactSection/contactForm";
 import AwardsV2 from "@/components/sections/AwardsSection/AwardsV2";
 import Footer from "@/components/ui/layout/footer";
-import NewsV2 from "@/components/sections/NewsSection/NewsV2";
+import News from "@/components/sections/NewsSection/News";
 
 gsap.registerPlugin(ScrollSmoother);
 
@@ -41,7 +43,7 @@ export default function Home() {
 
         {/* ABOUT US */}
         <About data-speed="0.2" />
-        <CoreValues data-speed="0.1" />
+        <CoreValues data-speed="0.2" />
         <People data-speed="0.15" />
 
         {/* SERVICES */}
@@ -51,7 +53,7 @@ export default function Home() {
         <TrustedPartners data-speed="0.1" />
 
         <AwardsV2 data-speed="0.1" />
-        <NewsV2 data-speed="0.15" />
+        <News data-speed="0.15" />
         <Contact data-speed="0.1" />
         <Footer />
       </div>
