@@ -4,7 +4,7 @@ import {
   LinkedinIcon,
   YoutubeIcon,
 } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -20,15 +20,15 @@ export default function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className=" lg:mx-30 p-8 pb-16 grid lg:grid-cols-4 gap-18">
+      <div className=" lg:mx-30 p-8 pb-16 grid lg:grid-cols-4 gap-12">
         {/* Brand */}
         <div className="space-y-4">
           {/*           <Image
-            src="/nav_images/PPI_logo.png"
-            alt="logo"
-            width={300}
-            height={400}
-          /> */}
+              src="/nav_images/PPI_logo.png"
+              alt="logo"
+              width={300}
+              height={400}
+            /> */}
           <h3 className="text-md">Panamed Philippines Inc.</h3>
           <p className=" text-white/70 leading-relaxed">
             Delivering quality healthcare solutions with integrity and
@@ -38,8 +38,10 @@ export default function Footer() {
 
         {/* Navigation */}
         <div>
-          <h4 className="text-md uppercase tracking-wide mb-4">Company</h4>
-          <ul className="space-y-3  text-white/70">
+          <h4 className="text-base uppercase tracking-wide mb-4">
+            Corporate Address
+          </h4>
+          <ul className="space-y-3 text-sm text-white/70">
             <li>5F Meriton One Building 1668 Quezon </li>
             <li>Avenue Quezon City 1103</li>
             <li>Philippines</li>
@@ -49,29 +51,13 @@ export default function Footer() {
         {/* Products */}
         <div>
           <h4 className="text-md  uppercase tracking-wide mb-4">
-            Corporate Address
+            Pickup Address
           </h4>
           <ul className="space-y-3 text-sm text-white/70">
-            <li>
-              <a href="/products" className="hover:text-white">
-                Medical Equipment
-              </a>
-            </li>
-            <li>
-              <a href="/products" className="hover:text-white">
-                Diagnostic Solutions
-              </a>
-            </li>
-            <li>
-              <a href="/products" className="hover:text-white">
-                Consumables
-              </a>
-            </li>
-            <li>
-              <a href="/products" className="hover:text-white">
-                After-Sales Support
-              </a>
-            </li>
+            <li>488 G. Araneta Avenue, corner Del Monte Avenue</li>
+            <li>Brgy. Sienna, Quezon City 1114 Philippines</li>
+            <li></li>
+            <li></li>
           </ul>
         </div>
 
@@ -79,9 +65,8 @@ export default function Footer() {
         <div>
           <h4 className="text-md  uppercase tracking-wide mb-4">Contact</h4>
           <ul className="space-y-3 text-sm text-white/70">
-            <li>📍 Manila, Philippines</li>
-            <li>📞 +63 123 456 7890</li>
-            <li>✉️ info@progressivemedical.com</li>
+            <li>📞 +63 2 8559 9558</li>
+            <li>✉️ info@panamed.com.ph</li>
           </ul>
         </div>
       </div>
@@ -91,18 +76,24 @@ export default function Footer() {
         <div className="lg:mx-30  px-6 py-6 flex flex-col md:flex-row justify-between gap-4 text-sm text-white/60">
           <span>© {new Date().getFullYear()} Panamed Philippines Inc.</span>
           <div className="flex gap-3">
-            <a href="/terms" className="hover:text-white">
+            <Link
+              href="https://www.facebook.com/panamedph"
+              className="hover:text-white">
               <FacebookIcon width={22} />
-            </a>
-            <a href="/privacy" className="hover:text-white">
+            </Link>
+            <Link
+              href="https://www.instagram.com/panamedphilippines/ "
+              className="hover:text-white">
               <InstagramIcon width={22} />
-            </a>
-            <a href="/privacy" className="hover:text-white">
+            </Link>
+            <Link
+              href="https://www.youtube.com/@panamedphilippinesinc.2976/featured"
+              className="hover:text-white">
               <YoutubeIcon width={22} />
-            </a>
-            <a href="/privacy" className="hover:text-white">
+            </Link>
+            <Link href="/privacy" className="hover:text-white">
               <LinkedinIcon width={22} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
