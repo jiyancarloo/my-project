@@ -6,6 +6,7 @@ import { useRef, useState, useEffect } from "react";
 import React from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
@@ -95,7 +96,7 @@ export default function Navbar() {
     <section
       ref={navRef}
       className="fixed top-3 left-1/2 -translate-x-1/2 z-50 opacity-0 w-full px-4">
-      <div className="mx-auto max-w-4xl backdrop-blur-lg shadow-xl rounded-full bg-[#F4F6FB] px-4 md:px-8 py-3 md:py-4 flex items-center justify-between">
+      <div className="mx-auto max-w-5xl backdrop-blur-lg shadow-xl rounded-full bg-[#F4F6FB] px-4 md:px-8 py-3 md:py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Image
@@ -104,7 +105,7 @@ export default function Navbar() {
             alt="Logo"
             width={140}
             height={140}
-            className="cursor-pointer w-25 md:w-35"
+            className="cursor-pointer w-30 md:w-40"
           />
         </div>
 
@@ -124,10 +125,12 @@ export default function Navbar() {
           ))}
 
           {/* Shop Button */}
-          <button className="ml-2 flex items-center gap-2 px-4 py-2 rounded-full text-sm text-black/60 hover:text-third transition">
-            <ShoppingBasket size={20} strokeWidth={1.2} />
-            Shop
-          </button>
+          <Link href="https://panamed.com.ph/shop/">
+            <button className="ml-2 flex items-center gap-2 px-4 py-2 rounded-full text-sm text-black/60 hover:text-third transition">
+              Shop
+              <ShoppingBasket size={20} strokeWidth={1.2} />
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -162,10 +165,12 @@ export default function Navbar() {
             </button>
           ))}
 
-          <button className="mt-2 flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-sm text-black/60 hover:text-third hover:bg-black/5 transition">
-            <ShoppingBasket size={20} strokeWidth={1.2} />
-            Shop
-          </button>
+          <Link href="https://panamed.com.ph/shop/">
+            <button className="mt-2 flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-sm text-black/60 hover:text-third hover:bg-black/5 transition">
+              Shop
+              <ShoppingBasket size={20} strokeWidth={1.2} />
+            </button>
+          </Link>
         </div>
       </div>
     </section>
