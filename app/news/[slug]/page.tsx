@@ -16,12 +16,26 @@ export default async function NewsArticle({ params }: Props) {
   return (
     <>
       <section className="min-h-screen bg-[#F4F6FB] ">
-        <div className="max-w-380 mx-auto px-4 sm:px-8 lg:px-12  text-pretty py-10 ">
+        <div className="max-w-380 mx-auto px-4 sm:px-8 lg:px-12  text-pretty pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_380px] gap-20">
             <main className="space-y-6 max-w-none">
+              <div className="flex items-center pt-2">
+                <div className="group inline-block relative pt-2 z-20 ">
+                  {/* <Link href="/#news">
+                    <button
+                      className="relative overflow-hidden px-4 lg:p-8 py-2 lg:py-4 w-fit rounded-full border border-black/50  text-0
+                transition-colors duration-500 text-base lg:text-lg text-black">
+                      <span className="absolute inset-0 bg-third -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out rounded-lg"></span>
+                      <span className="relative z-10 group-hover:text-white transition-colors duration-500 ">
+                        Back to home
+                      </span>
+                    </button>
+                  </Link> */}
+                </div>
+              </div>
               <Link
                 href="/#news"
-                className="inline-flex items-center gap-1 text-third font-medium group mt-2">
+                className="inline-flex items-center gap-1 text-third font-medium group mt-2 text-base">
                 <span className="transform transition-transform duration-300 group-hover:-translate-x-1">
                   ←
                 </span>
