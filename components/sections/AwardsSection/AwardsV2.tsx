@@ -51,7 +51,7 @@ export default function AwardsV2() {
   return (
     <>
       <section className="bg-[#F4F6FB]" id="awards" ref={sectionRef}>
-        <div className="px-4 sm:px-8 lg:mx-30 lg:py-40 space-y-8 py-30 ">
+        <div className="px-4 py-30 sm:px-8 lg:mx-30 lg:py-40 space-y-4">
           <div className="w-fit flex items-center gap-2">
             <div className="w-8 h-px bg-third rounded-full" />
             <span className="text-black/60 uppercase tracking-wide whitespace-nowrap">

@@ -116,7 +116,7 @@ export default function Hero() {
       {/* Brand Carousel */}
       <section className="lg:py-4 sm:py-2">
         <div className="overflow-hidden pointer-events-none" ref={emblaRef}>
-          <div className="flex gap-2">
+          <div className="flex  lg:gap-2">
             {brandInfo.map((item, index) => (
               <div key={index} className="flex-[0_0_16%]">
                 <div className="h-40 flex items-center justify-center">

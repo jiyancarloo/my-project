@@ -11,7 +11,7 @@ export default function NewsV2() {
   return (
     <>
       <section id="news" ref={sectionRef} className="min-h-screen relative">
-        <div className="px-4 sm:px-8 py-12 lg:mx-30  lg:py-30 space-y-14">
+        <div className="px-4 sm:px-8 py-30 lg:mx-30 lg:py-30 space-y-14">
           <div className="w-fit flex items-center gap-2">
             <div className="w-8 h-px bg-third rounded-full" />
             <span className="text-black/60 uppercase tracking-wide whitespace-nowrap">
@@ -39,7 +39,7 @@ export default function NewsV2() {
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-xl lg:text-3xl font-medium">
+                <h3 className="text-xl lg:text-2xl font-medium">
                   {featured.title}
                 </h3>
                 <span className="text-sm lg:text-base text-black/60">
