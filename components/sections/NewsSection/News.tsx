@@ -9,7 +9,7 @@ export default function News() {
   return (
     <>
       <section id="news" ref={sectionRef} className="min-h-screen relative ">
-        <div className="mx-40 py-30 p-8 space-y-14">
+        <div className="px-4 sm:px-8 py-30 lg:mx-30 lg:py-30 space-y-14">
           <div className="w-fit flex items-center gap-2">
             <div className="w-8 h-px bg-third rounded-full" />
             <span className="text-black/60 uppercase tracking-wide whitespace-nowrap">
@@ -17,39 +17,44 @@ export default function News() {
             </span>
           </div>
           <article className="mt-4">
-            <p className=" text-4xl text-third max-w-7xl">
+            <p className="text-2xl lg:text-4xl text-third max-w-7xl">
               Stay informed with the latest updates, announcements, and industry
               insights from our team.
             </p>
           </article>
 
           <div className="mx-auto">
-            <div className="grid lg:grid-cols-4 sm:grid-cols-1 gap-6 mt-8">
+            <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-8 mt-8">
               {news.map((item, index) => (
-                <Link key={index} href={`/news/${item.slug}`}>
-                  {index === 0}
-                  {item.images.map((image, index) => (
-                    <Image
-                      key={index}
-                      src={image.src}
-                      width={400}
-                      height={400}
-                      alt={image.alt}
-                      className="mb-3 rounded-lg object-fit-cover"
-                    />
-                  ))}
-                  <div className="mb-2">
-                    <span className="text-black/60 text-sm">{item.date}</span>
-                  </div>
+                <div key={index}>
+                  <Image
+                    key={index}
+                    src={item.coverImage.src}
+                    alt={item.coverImage.alt}
+                    width={400}
+                    height={400}
+                    className="mb-3 w-full aspect-video object-cover rounded-lg"
+                  />
+
                   <div className="space-y-2">
-                    <div>
-                      <span className=" font-semibold">{item.title}</span>
+                    <span className="text-black/60 text-sm block">
+                      {item.date}
+                    </span>
+                    <div className="">
+                      <span className="font-medium">{item.title}</span>
                     </div>
-                    <div>
-                      <span className="text-gray-600">{item.exerpt}</span>
-                    </div>
+                    <span className="text-gray-600 block">{item.exerpt}</span>
                   </div>
-                </Link>
+
+                  <Link
+                    href={`/news/${item.slug}`}
+                    className="inline-flex items-center gap-1 text-third font-medium group mt-2 ">
+                    Read More
+                    <span className="transform transition-transform duration-400 group-hover:translate-x-1">
+                      →
+                    </span>
+                  </Link>
+                </div>
               ))}
             </div>
           </div>
