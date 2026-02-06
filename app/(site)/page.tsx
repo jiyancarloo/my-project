@@ -19,6 +19,7 @@ import Contact from "@/components/sections/ContactSection/contactForm";
 import AwardsV2 from "@/components/sections/AwardsSection/AwardsV2";
 import Footer from "@/components/ui/layout/footer";
 import News from "@/components/sections/NewsSection/News";
+import NewsV2 from "@/components/sections/NewsSection/NewsV2";
 
 gsap.registerPlugin(ScrollSmoother);
 
@@ -53,7 +54,8 @@ export default function Home() {
         <TrustedPartners data-speed="0.1" />
 
         <AwardsV2 data-speed="0.1" />
-        <News data-speed="0.15" />
+        {/* <News data-speed="0.15" /> */}
+        <NewsV2 data-speed="0.15" />
         <Contact data-speed="0.1" />
         <Footer />
       </div>
