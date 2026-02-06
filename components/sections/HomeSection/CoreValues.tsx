@@ -73,7 +73,7 @@ export default function CoreValues() {
           stagger: 0.2,
           ease: "power2.out",
         },
-        "-=0.5", // start 1s before the previous animation finishes
+        "-=0.3", // start 1s before the previous animation finishes
       );
     }, sectionRef);
 
@@ -101,7 +101,7 @@ export default function CoreValues() {
             {/* CORE VALUES */}
             <div className="mt-20">
               {/* First row (3 items) */}
-              <div className="grid lg:grid-cols-3 gap-10">
+              <div className="grid lg:grid-cols-3 gap-10  ">
                 {coreItems.slice(0, 3).map((item, index) => {
                   const CoreIcon = item.icon;
                   return (
@@ -125,12 +125,12 @@ export default function CoreValues() {
               <div className=" mx-auto h-px bg-white/60  my-20 animate-line will-change-transform" />
 
               {/* Second row (3 items) */}
-              <div className="grid lg:grid-cols-3 gap-10">
+              <div className="grid lg:grid-cols-3 gap-10 ">
                 {coreItems.slice(3, 6).map((item, index) => {
                   const CoreIcon = item.icon;
                   return (
                     <div key={index} className="space-y-6 animate-item">
-                      <div className="inline-flex items-center gap-3">
+                      <div className="inline-flex items-center gap-3 ">
                         <CoreIcon size={36} strokeWidth={1} color="#90CAF9" />
                         <span className="text-xl text-blue-200 ">
                           {item.title}
